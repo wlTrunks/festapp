@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_width">220dp</dimen>
+    <dimen name="margin_normal">30dp</dimen>
+
+
+    <!--text size-->
+    <dimen name="little_ts">12sp</dimen>
+    <dimen name="medium_ts">14sp</dimen>
+    <dimen name="main_ts">16sp</dimen>
+    <dimen name="title_ts">18sp</dimen>
+</resources>

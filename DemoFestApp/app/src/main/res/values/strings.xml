@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DemoFestApp</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="login_hint">Login</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="menu_back">Back</string>
+    <string name="confirm">Confirm</string>
+</resources>

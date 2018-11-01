@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/medium_ts</item>
+    </style>
+
+    <style name="Text.Clickable">
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="EditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
+
+    </style>
+
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlHighlight">@color/green</item>
+        <item name="android:textSize">@dimen/main_ts</item>
+        <item name="android:minWidth">@dimen/min_width</item>
+    </style>
+
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+    </style>
+
+    <style name="ErrorText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/medium_ts</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/main_ts</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <!--<item name="android:textColorPrimary">@color/black_light</item>-->
+        <!--<item name="colorPrimary">@color/actionbar_background</item>-->
+        <!--<item name="colorPrimaryDark">@color/system_panel</item>-->
+        <!--<item name="android:windowBackground">@drawable/ag_back</item>-->
+        <!--<item name="android:colorBackground">@color/green_light</item>-->
+        <!--<item name="android:actionMenuTextColor">@color/white</item>-->
+        <!--<item name="android:itemTextAppearance">@style/itemTextStyle</item>-->
+        <!--<item name="android:spinnerDropDownItemStyle">@style/spinnerDropDownItemStyle</item>-->
+        <!--<item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>-->
+        <!--<item name="colorAccent">@color/green_light</item>-->
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">@color/system_panel</item>-->
+        <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>-->
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:background">@color/toolbarBackgroundColor</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+</resources>
