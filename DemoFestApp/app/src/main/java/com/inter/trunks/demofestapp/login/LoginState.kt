@@ -7,5 +7,5 @@ import org.koin.standalone.get
 
 class LoginState : BaseState(VoidParams.instance()) {
     override fun onConvertContent(params: Params?, fragment: JugglerFragment?): JugglerFragment =
-        get(name = LOGIN_FRAGMENT_PATH_MODULE) as LoginFragment
+        get(name = LOGIN_FRAGMENT_PATH) as LoginFragment
 }

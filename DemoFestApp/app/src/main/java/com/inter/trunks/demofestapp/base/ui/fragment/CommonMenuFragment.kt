@@ -1,27 +1,35 @@
 package com.inter.trunks.demofestapp.base.ui.fragment
 
+import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import com.inter.trunks.demofestapp.base.util.LogUtil
+import com.inter.trunks.demofestapp.base.util.hideKeyboard
 
 abstract class CommonMenuFragment : BaseFragment() {
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        onItemMenuSelected(item.itemId)
-        return when (item.itemId) {
-            android.R.id.home -> {
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(getMenuResources(), menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
 
     abstract fun getMenuResources(): Int
 
-    open fun onItemMenuSelected(itemId: Int) {}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        menu?.clear()
+        inflater?.inflate(getMenuResources(), menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        hideKeyboard()
+        LogUtil.printLog("CommonMenuFragment", "onOptionsItemSelected ${item.itemId}")
+        onMenuItemSelected(item.itemId)
+        return true
+    }
+
+    open fun onMenuItemSelected(itemId: Int) {
+    }
 }
