@@ -1,8 +1,8 @@
 package com.inter.trunks.demofestapp.base.util
 
 import android.content.Context
-import android.support.v4.app.Fragment
 import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.Fragment
 
 
 fun Fragment.hideKeyboard() {

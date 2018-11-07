@@ -1,6 +1,6 @@
 package com.inter.trunks.demofestapp.base.interfaces
 
-import android.support.annotation.LayoutRes
+import androidx.annotation.LayoutRes
 
 interface LayoutResources {
     @LayoutRes

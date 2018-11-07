@@ -30,6 +30,7 @@ class SplashActivity : JugglerActivity() {
 
     fun onSplashShowingComplete() {
         navigateTo().state(
+            Remove.closeCurrentActivity(),
             Add.newActivity(
                 loginState,
                 BaseActivity::class.java

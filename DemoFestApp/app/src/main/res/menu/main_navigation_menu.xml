@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_calendar"
+          android:visible="true"
+          android:enabled="true"
+          app:showAsAction="never"
+          android:id="@+id/ic_calendar"
+          android:title="calendar"/>
+    <item android:icon="@drawable/ic_clipboards"
+          android:visible="true"
+          android:enabled="true"
+          app:showAsAction="never"
+          android:id="@+id/ic_calendat"
+          android:title="clipboard"/>
+    <item android:icon="@drawable/ic_place"
+          android:visible="true"
+          android:enabled="true"
+          app:showAsAction="never"
+          android:id="@+id/ic_place"
+          android:title="place"/>
+    <item android:icon="@drawable/ic_search"
+          android:visible="true"
+          android:enabled="true"
+          app:showAsAction="never"
+          android:id="@+id/ic_search"
+          android:title="search"/>
+    <item android:icon="@drawable/ic_profile"
+          android:visible="true"
+          android:enabled="true"
+          app:showAsAction="never"
+          android:id="@+id/ic_profile"
+          android:title="profile"/>
+</menu>

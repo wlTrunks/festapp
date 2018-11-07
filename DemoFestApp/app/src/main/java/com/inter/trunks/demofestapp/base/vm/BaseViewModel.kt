@@ -1,7 +1,7 @@
 package com.inter.trunks.demofestapp.base.vm
 
-import android.arch.lifecycle.*
-import android.support.annotation.CallSuper
+import androidx.annotation.CallSuper
+import androidx.lifecycle.*
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import org.koin.standalone.KoinComponent

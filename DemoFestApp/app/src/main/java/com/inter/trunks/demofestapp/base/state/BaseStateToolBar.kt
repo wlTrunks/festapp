@@ -1,8 +1,8 @@
 package com.inter.trunks.demofestapp.base.state
 
 import android.content.Context
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.ActionBar
+import androidx.appcompat.app.ActionBar
+import androidx.core.content.ContextCompat
 import com.inter.trunks.demofestapp.R
 import com.inter.trunks.demofestapp.base.ui.fragment.CommonToolbarFragment
 import me.ilich.juggler.gui.JugglerFragment

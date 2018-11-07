@@ -1,7 +1,7 @@
 package com.inter.trunks.demofestapp
 
-import android.support.multidex.MultiDexApplication
-import android.support.v7.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.multidex.MultiDexApplication
 import com.inter.trunks.demofestapp.app.AppModule
 import com.inter.trunks.demofestapp.login.LoginModule
 import com.inter.trunks.demofestapp.registration.RegistrationModule
