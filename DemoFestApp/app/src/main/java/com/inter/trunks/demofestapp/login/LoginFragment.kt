@@ -30,13 +30,6 @@ open class LoginFragment : BaseFragment() {
 
 
         }
-        val array: IntArray = intArrayOf(23, 7, 3, 4, 64, 773, 33, 643)
-
-        insertionSort(array)
-for (i in array) {
-    println("i = %i")
-}
-
         sign_in.setOnClickListener {
             vm.signUp(context!!, login.text.toString().trim(), password.text.toString().trim(),
                 {
@@ -50,15 +43,4 @@ for (i in array) {
         }
     }
 
-    fun insertionSort(elements: IntArray) {
-        for (i in 1 until elements.size) {
-            val key = elements[i]
-            var j = i - 1
-            while (j >= 0 && key < elements[j]) {
-                elements[j + 1] = elements[j]
-                j--
-            }// end while loop
-            elements[j + 1] = key
-        }// end for loop
-    }
 }
