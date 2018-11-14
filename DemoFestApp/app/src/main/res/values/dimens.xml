@@ -9,4 +9,6 @@
     <dimen name="medium_ts">14sp</dimen>
     <dimen name="main_ts">16sp</dimen>
     <dimen name="title_ts">18sp</dimen>
+    <dimen name="calendar_day_event_logo">30dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
 </resources>

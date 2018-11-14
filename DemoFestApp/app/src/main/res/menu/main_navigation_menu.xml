@@ -10,8 +10,8 @@
           android:visible="true"
           android:enabled="true"
           app:showAsAction="never"
-          android:id="@+id/ic_calendat"
-          android:title="clipboard"/>
+          android:id="@+id/ic_lineup"
+          android:title="lineup"/>
     <item android:icon="@drawable/ic_place"
           android:visible="true"
           android:enabled="true"

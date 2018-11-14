@@ -14,31 +14,26 @@ import com.inter.trunks.demofestapp.calendar.model.WeekDays
 import java.util.*
 
 class CalendarView : LinearLayoutCompat {
-    constructor(month: Int, context: Context) : super(context) {
-        this.month = month
+    constructor(context: Context) : super(context) {
         init()
     }
 
-    constructor(month: Int, context: Context, attrs: AttributeSet) : super(context, attrs) {
-        this.month = month
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init()
     }
 
-    constructor(month: Int, context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
         context,
         attrs,
         defStyleAttr
     ) {
-        this.month = month
         init()
     }
 
     lateinit var cal: Calendar
-    var month: Int = 0
     lateinit var monthTitle: AppCompatTextView
     lateinit var list: RecyclerView
     fun init() {
-        monthTitle
         inflate(context, R.layout.layout_month, this)
         monthTitle = rootView.findViewById(R.id.month_title)
         list = rootView.findViewById(R.id.list)
@@ -58,18 +53,13 @@ class CalendarView : LinearLayoutCompat {
         val cal = Calendar.getInstance()
         cal.set(Calendar.DAY_OF_MONTH, 1)
         val dayOfWeek = cal.get(Calendar.DAY_OF_WEEK) - 1
-        println("SOUT dayOfWeek $dayOfWeek")
         for (i in dayOfWeek - 1 downTo 1) {
-            println("SOUT dayOfWeek i $i")
             list.add(EmptyDays())
         }
         val maxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH)
-        println("SOUT maxDay $maxDay")
         for (i in 0 until maxDay) {
-            println("SOUT maxDay i $i")
             val day = i + 1
-            println("SOUT day day $day")
-            list.add(Days(day, "$day"))
+            list.add(Days(day, "$day", arrayListOf()))
         }
     }
 

@@ -3,6 +3,8 @@ package com.inter.trunks.demofestapp
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.inter.trunks.demofestapp.app.AppModule
+import com.inter.trunks.demofestapp.app.MainModule
+import com.inter.trunks.demofestapp.event.EventModule
 import com.inter.trunks.demofestapp.login.LoginModule
 import com.inter.trunks.demofestapp.registration.RegistrationModule
 import com.inter.trunks.demofestapp.splash.SplashModule
@@ -17,7 +19,9 @@ class DemoFestApp : MultiDexApplication() {
             AppModule,
             SplashModule,
             LoginModule,
-            RegistrationModule
+            RegistrationModule,
+            MainModule,
+            EventModule
         )
         startKoin(this, koinList)
     }

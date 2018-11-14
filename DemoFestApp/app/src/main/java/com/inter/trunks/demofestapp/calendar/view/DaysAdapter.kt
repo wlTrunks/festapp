@@ -1,9 +1,11 @@
 package com.inter.trunks.demofestapp.calendar.view
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatTextView
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.inter.trunks.demofestapp.R
 import com.inter.trunks.demofestapp.calendar.model.CalendarItemType
@@ -36,25 +38,26 @@ class DaysAdapter(val list: MutableList<CalendarItemType>) : RecyclerView.Adapte
     override fun getItemCount(): Int = list.size
 
     override fun onBindViewHolder(holder: BaseVH, position: Int) {
-        println("SOUT position $position")
         when (list[position]) {
             is EmptyDays -> {
-                println(" is EmptyDays")
                 if (list[position] is EmptyDays) {
                     val empty = list[position] as EmptyDays
                 }
             }
-
             is Days -> {
-                println(" is Days")
                 if (list[position] is Days) {
                     val days = list[position] as Days
                     val vh = holder as DayVH
-                    vh.dayTile.text = days.dayTitle
+                    vh.dayTitle.text = days.dayTitle
+                    if (days.dayMonth == 24) {
+                        vh.itemView.setOnClickListener({
+                            Toast.makeText(holder.itemView.context, "new window", Toast.LENGTH_LONG).show()
+                        })
+                        vh.layoutEventLogo.addView(getEventLogo(holder.itemView.context))
+                    }
                 }
             }
             is WeekDays -> {
-                println(" is WeekDays")
                 if (list[position] is WeekDays) {
                     val weekDay = list[position] as WeekDays
                     val vh = holder as WeekDayVH
@@ -72,14 +75,25 @@ class DaysAdapter(val list: MutableList<CalendarItemType>) : RecyclerView.Adapte
         }
     }
 
+    fun getEventLogo(context: Context): View {
+        val eventLogo = AppCompatImageView(context)
+        val param: ViewGroup.LayoutParams = ViewGroup.LayoutParams(
+            context.resources.getDimension(R.dimen.calendar_day_event_logo).toInt(),
+            context.resources.getDimension(R.dimen.calendar_day_event_logo).toInt()
+        )
+        eventLogo.layoutParams = param
+        eventLogo.setBackgroundResource(R.drawable.comic_con)
+        return eventLogo
+    }
+
     override fun getItemViewType(position: Int): Int {
         val i = list[position].getType()
-        println("SOUT getItemViewType type $i")
         return list[position].getType()
     }
 
     class DayVH(view: View) : BaseVH(view) {
-        val dayTile = view.day_title
+        val dayTitle = view.day_title
+        val layoutEventLogo = view.layout_event_logo
     }
 
     class WeekDayVH(view: View) : BaseVH(view) {
