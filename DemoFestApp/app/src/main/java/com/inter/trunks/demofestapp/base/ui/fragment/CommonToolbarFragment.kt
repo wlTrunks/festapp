@@ -49,23 +49,6 @@ open class CommonToolbarFragment : JugglerToolbarFragment() {
 
     companion object {
 
-        private const val COMMON_TOOLBAR_RECEIVER_FILTER = "ru.app.volunteers.gui.base_common_toolbar_receiver_filter"
-        private const val EXTRA_TITLE_RECEIVER = "extra_title_receiver"
-        private const val EXTRA_TITLE_TEXT_RECEIVER = "extra_title_text_receiver"
-
-
-        fun setTitle(context: Context?, stringId: Int) {
-            context?.let {
-                LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(COMMON_TOOLBAR_RECEIVER_FILTER).apply { putExtra(EXTRA_TITLE_RECEIVER, stringId) })
-            }
-        }
-
-        fun setTitle(context: Context?, title: String) {
-            context?.let {
-                LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(COMMON_TOOLBAR_RECEIVER_FILTER).apply { putExtra(EXTRA_TITLE_TEXT_RECEIVER, title) })
-            }
-        }
-
         fun instance(): CommonToolbarFragment {
             val result = CommonToolbarFragment()
             val b = Bundle()

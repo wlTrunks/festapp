@@ -40,9 +40,6 @@
         </activity>
 
         <activity
-                android:name=".MapsActivity"
-                android:label="@string/title_activity_maps"/>
-        <activity
                 android:name=".base.ui.BaseActivity"
                 android:configChanges="orientation|screenSize"
                 android:theme="@style/AppTheme.NoActionBar"

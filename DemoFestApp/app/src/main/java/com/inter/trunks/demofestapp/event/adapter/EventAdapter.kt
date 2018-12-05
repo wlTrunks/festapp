@@ -4,7 +4,7 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.inter.trunks.demofestapp.event.EVENT_PAGER_LIST
+import com.inter.trunks.demofestapp.event.di.EVENT_PAGER_LIST
 import org.koin.standalone.KoinComponent
 import org.koin.standalone.inject
 

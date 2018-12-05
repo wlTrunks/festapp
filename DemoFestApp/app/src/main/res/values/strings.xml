@@ -8,4 +8,10 @@
     <string name="repeat_password">Repeat password</string>
     <string name="menu_back">Back</string>
     <string name="confirm">Confirm</string>
+    <string name="event_main">Основные События</string>
+    <string name="event_favorite">Избранные События</string>
+    <string name="event_search">Поиск Событий</string>
+    <string name="profile_status">Status</string>
+    <string name="profile_surname">Family name</string>
+    <string name="first_name">First Name</string>
 </resources>

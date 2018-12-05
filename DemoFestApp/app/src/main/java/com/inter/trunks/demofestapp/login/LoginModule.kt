@@ -4,6 +4,7 @@ import com.inter.trunks.demofestapp.base.util.AppSharedPreferences
 import com.inter.trunks.demofestapp.login.repository.LocalLoginRepository
 import com.inter.trunks.demofestapp.login.repository.LoginInterefaceRepository
 import org.koin.android.ext.koin.androidApplication
+import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
@@ -17,5 +18,5 @@ val LoginModule: Module = module(override = true, path = LOGIN_PATH_MODULE) {
     single(name = LOGIN_FRAGMENT_PATH) { LoginFragment() }
     single(name = LOGIN_REPOSITORY_LOCAL){LocalLoginRepository() as LoginInterefaceRepository}
     viewModel { LoginVM() }
-    single(name = LOGIN_SHARED_PREF) { AppSharedPreferences(androidApplication(), LOGIN_SHARED_PREF) }
+    single(name = LOGIN_SHARED_PREF) { AppSharedPreferences(androidContext(), LOGIN_SHARED_PREF) }
 }

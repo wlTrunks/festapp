@@ -33,14 +33,19 @@ open class LoginFragment : BaseFragment() {
         sign_in.setOnClickListener {
             vm.signUp(context!!, login.text.toString().trim(), password.text.toString().trim(),
                 {
-                    activity?.finishAffinity()
-                    startActivity(Intent(context, MainActivity::class.java))
+                    succesLogin()
                 },
                 {
+                    succesLogin()
                     wrap_password.error = "password error"
                 }
             )
         }
+    }
+
+     fun succesLogin() {
+        activity?.finishAffinity()
+        startActivity(Intent(context, MainActivity::class.java))
     }
 
 }
